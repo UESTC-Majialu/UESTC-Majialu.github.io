@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 马嘉路个人空间
-subtitle: 'Blog of MaJialu'
+title: 马嘉路
+subtitle: '长风破浪会有时，直挂云帆济沧海!'
 description: '长风破浪会有时，直挂云帆济沧海!'
 keywords:
 author: MaJialu
@@ -106,3 +106,12 @@ deploy:
   repo: https://github.com/UESTC-Majialu/UESTC-Majialu.github.io
   branch: main
   message: 'update Hexo Static Content'
+
+kramed:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
