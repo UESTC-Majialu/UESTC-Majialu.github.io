@@ -5,11 +5,12 @@
 # Site
 title: 马嘉路个人空间
 subtitle: 'Blog of MaJialu'
-description: '长风破浪会有时，直挂云帆济沧海'
+description: '长风破浪会有时，直挂云帆济沧海!'
 keywords:
 author: MaJialu
 language: zh-CN
 timezone: 'Asia/Shanghai'
+email: 1835027607@qq.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
