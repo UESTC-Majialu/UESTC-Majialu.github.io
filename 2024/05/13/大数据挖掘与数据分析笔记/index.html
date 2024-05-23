@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据挖掘与数据分析笔记 | 马嘉路</title><meta name="author" content="MaJialu,1835027607@qq.com"><meta name="copyright" content="MaJialu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="绪论数据挖掘的由来背景  数据爆炸但知识却反 从商业数据到商业智能的进化 数据搜集 数据访问 数据仓库,决策支持 数据挖掘   科学发展范式 经验科学 理论科学 计算科学 数据科学    定义 数据挖掘是从大量的,不完全的,有噪声的,模糊的,随机的 数据 中提取隐含在其中的,人们事先不知道的,但又是潜在有用的 信息和知识 的过程 基本概念数据 “8000”,”1000”是数据 信息 “8000米是">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据挖掘与数据分析笔记 | 马嘉路</title><meta name="author" content="MaJialu,1835027607@qq.com"><meta name="copyright" content="MaJialu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="绪论 数据挖掘的由来 背景  数据爆炸但知识却反 从商业数据到商业智能的进化  数据搜集 数据访问 数据仓库,决策支持 数据挖掘   科学发展范式  经验科学 理论科学 计算科学 数据科学    定义 数据挖掘是从大量的,不完全的,有噪声的,模糊的,随机的 数据 中提取隐含在其中的,人们事先不知道的,但又是潜在有用的 信息和知识 的过程 基本概念 数据 “8000”,&quot;1000&amp;quot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据挖掘与数据分析笔记">
 <meta property="og:url" content="http://uestc-majialu.github.io/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="马嘉路">
-<meta property="og:description" content="绪论数据挖掘的由来背景  数据爆炸但知识却反 从商业数据到商业智能的进化 数据搜集 数据访问 数据仓库,决策支持 数据挖掘   科学发展范式 经验科学 理论科学 计算科学 数据科学    定义 数据挖掘是从大量的,不完全的,有噪声的,模糊的,随机的 数据 中提取隐含在其中的,人们事先不知道的,但又是潜在有用的 信息和知识 的过程 基本概念数据 “8000”,”1000”是数据 信息 “8000米是">
+<meta property="og:description" content="绪论 数据挖掘的由来 背景  数据爆炸但知识却反 从商业数据到商业智能的进化  数据搜集 数据访问 数据仓库,决策支持 数据挖掘   科学发展范式  经验科学 理论科学 计算科学 数据科学    定义 数据挖掘是从大量的,不完全的,有噪声的,模糊的,随机的 数据 中提取隐含在其中的,人们事先不知道的,但又是潜在有用的 信息和知识 的过程 基本概念 数据 “8000”,&quot;1000&amp;quot">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://uestc-majialu.github.io/img/avatar.png">
 <meta property="article:published_time" content="2024-05-13T03:46:14.000Z">
-<meta property="article:modified_time" content="2024-05-23T12:08:32.461Z">
+<meta property="article:modified_time" content="2024-05-23T14:06:34.934Z">
 <meta property="article:author" content="MaJialu">
 <meta property="article:tag" content="大数据">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-05-23 20:08:32'
+  postUpdate: '2024-05-23 22:06:34'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -174,17 +174,21 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bgc.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="马嘉路"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">马嘉路</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大数据挖掘与数据分析笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-23T12:08:32.461Z" title="更新于 2024-05-23 20:08:32">2024-05-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="大数据挖掘与数据分析笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据挖掘的由来"><a href="#数据挖掘的由来" class="headerlink" title="数据挖掘的由来"></a>数据挖掘的由来</h2><p><strong>背景</strong></p>
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bgc.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="马嘉路"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">马嘉路</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大数据挖掘与数据分析笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-23T14:06:34.934Z" title="更新于 2024-05-23 22:06:34">2024-05-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="大数据挖掘与数据分析笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>绪论</h1>
+<h2 id="数据挖掘的由来">数据挖掘的由来</h2>
+<p><strong>背景</strong></p>
 <ul>
 <li>数据爆炸但知识却反</li>
-<li>从商业数据到商业智能的进化<ul>
+<li>从商业数据到商业智能的进化
+<ul>
 <li>数据搜集</li>
 <li>数据访问</li>
 <li>数据仓库,决策支持</li>
 <li>数据挖掘</li>
 </ul>
 </li>
-<li>科学发展范式<ul>
+<li>科学发展范式
+<ul>
 <li>经验科学</li>
 <li>理论科学</li>
 <li>计算科学</li>
@@ -194,44 +198,53 @@
 </ul>
 <p><strong>定义</strong></p>
 <p>数据挖掘是从<mark class="hl-label orange">大量的,不完全的,有噪声的,模糊的,随机的</mark> <mark class="hl-label red">数据</mark> 中提取<mark class="hl-label orange">隐含在其中的,人们事先不知道的,但又是潜在有用的</mark> <mark class="hl-label red">信息和知识</mark> 的过程</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>数据</strong></p>
-<p>“8000”,”1000”是数据</p>
+<h2 id="基本概念">基本概念</h2>
+<p><strong>数据</strong></p>
+<p>“8000”,&quot;1000&quot;是数据</p>
 <p><strong>信息</strong></p>
-<p>“8000米是飞机飞行最大高度”与”1000米的高山是信息”</p>
+<p>“8000米是飞机飞行最大高度&quot;与&quot;1000米的高山是信息”</p>
 <p><strong>知识</strong></p>
-<p>“飞机无法飞越这座高山是知识</p>
+<p>&quot;飞机无法飞越这座高山是知识</p>
 <p><strong>智慧</strong></p>
-<p>“飞机必须飞得比山高”是智慧</p>
-<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p><strong>关联规则挖掘</strong></p>
+<p>&quot;飞机必须飞得比山高&quot;是智慧</p>
+<h2 id="主要内容">主要内容</h2>
+<p><strong>关联规则挖掘</strong></p>
 <p>牛奶和尿布</p>
-<p><strong>非监督式机器学习—聚类</strong></p>
+<p><strong>非监督式机器学习–聚类</strong></p>
 <p><strong>监督式机器学习</strong></p>
 <ul>
-<li><p><strong>离散标签预测-标签分类</strong></p>
+<li>
+<p><strong>离散标签预测-标签分类</strong></p>
 <ul>
-<li><p>学习建模</p>
+<li>
+<p>学习建模</p>
 </li>
-<li><p>分类测试</p>
+<li>
+<p>分类测试</p>
 </li>
 </ul>
 </li>
-</ul>
-<ul>
-<li><strong>连续标签预测-数值预测</strong></li>
+<li>
+<p><strong>连续标签预测-数值预测</strong></p>
+</li>
 </ul>
 <p><strong>回归</strong></p>
-<h1 id="认识数据"><a href="#认识数据" class="headerlink" title="认识数据"></a>认识数据</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><strong>数据对象</strong></p>
+<h1>认识数据</h1>
+<h2 id="数据类型">数据类型</h2>
+<p><strong>数据对象</strong></p>
 <ul>
 <li>数据集由数据对象组成</li>
 <li>一个数据对象代表一个实体</li>
-<li>例子<ul>
+<li>例子
+<ul>
 <li>销售数据库： 客户，商店物品，销售额</li>
 <li>医疗数据库： 患者，治疗信息</li>
 <li>大学数据库： 学生，教授，课程信息</li>
 </ul>
 </li>
 <li>称为样品，实例，实例，数据点，对象，元组（tuple）</li>
-<li>数据对象所描述的属性<ul>
+<li>数据对象所描述的属性
+<ul>
 <li>数据库中的行：数据对象</li>
 <li>列： 属性</li>
 </ul>
@@ -239,31 +252,37 @@
 </ul>
 <p><strong>属性</strong></p>
 <ul>
-<li>属性（变量，特性，字段，特征或维）： 一个数据字段，代表一个数据对象的特征或功能<ul>
+<li>属性（变量，特性，字段，特征或维）： 一个数据字段，代表一个数据对象的特征或功能
+<ul>
 <li>例如： 乘客_ID  是否存活   客舱等级</li>
 </ul>
 </li>
-<li>类型：<ul>
-<li>标称:类别,状态<ul>
+<li>类型：
+<ul>
+<li>标称:类别,状态
+<ul>
 <li>颜色</li>
 <li>婚姻状况</li>
 <li>职业</li>
 <li>身份证号码</li>
 </ul>
 </li>
-<li>二进制<ul>
+<li>二进制
+<ul>
 <li>对称二进制</li>
 <li>非对称二进制</li>
 </ul>
 </li>
 <li>序数:有一个有意义的顺序,排名,但不知道连续值之间的大小</li>
-<li>区间标度<ul>
+<li>区间标度
+<ul>
 <li>以单位长度顺序性度量</li>
 <li>值有序,比如温度,日历等</li>
 <li>不存在0点,倍数没有意义:<mark class="hl-label blue">我们平常不说2024年是1012年的2倍</mark> </li>
 </ul>
 </li>
-<li>比率标度<ul>
+<li>比率标度
+<ul>
 <li>具有固定零点的数值属性</li>
 <li>有序且可以计算倍数</li>
 <li>如长度,重量等</li>
@@ -272,12 +291,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="数据统计汇总"><a href="#数据统计汇总" class="headerlink" title="数据统计汇总"></a>数据统计汇总</h2><ul>
+<h2 id="数据统计汇总">数据统计汇总</h2>
+<ul>
 <li>箱线图：分析多个属性数据的离散度差异性</li>
 <li>直方图：单个属性在各个区间变化分布</li>
 <li>散点图：两组数据相关性分布</li>
 </ul>
-<h2 id="数据相似性和相异性度量"><a href="#数据相似性和相异性度量" class="headerlink" title="数据相似性和相异性度量"></a>数据相似性和相异性度量</h2><p><strong>数据矩阵</strong>：N个数据，p个维度</p>
+<h2 id="数据相似性和相异性度量">数据相似性和相异性度量</h2>
+<p><strong>数据矩阵</strong>：N个数据，p个维度</p>
 <p><strong>相异矩阵</strong>：N个数据点，记录两点之间的距离，是一个下三角矩阵</p>
 <p><strong>相似度</strong>：</p>
 <ul>
@@ -303,7 +324,6 @@
 <p>$d(i,j)=\frac{p-m}{p}$</p>
 <p><strong>二值属性</strong></p>
 <p><strong>方法</strong>:使用邻接表</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -334,32 +354,38 @@
 </tr>
 </tbody>
 </table>
-</div>
 <p><strong>杰卡德相似系数</strong>：距离度量非对称的二值变量</p>
 <p>$sim_{jaccard}(i,j)=\frac{q}{q+r+s}$</p>
-<p>$d(i,j)=\sqrt[h]{\abs{x<em>{i1}-x</em>{j1}}+\abs{x<em>{i2}-x</em>{j2}}^h+…+\abs{x<em>{ip}-x</em>{jp}}^h}$</p>
+<p>$d(i,j)=\sqrt[h]{\abs{x_{i1}-x_{j1}}+\abs{x_{i2}-x_{j2}}^h+…+\abs{x_{ip}-x_{jp}}^h}$</p>
 <ul>
 <li>h=1:曼哈顿距离</li>
 <li>h=2:欧氏距离</li>
-<li>h=3:”上确界”距离</li>
+<li>h=3:&quot;上确界&quot;距离</li>
 </ul>
-<h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><h2 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h2><ul>
-<li>数据缺失<ul>
+<h1>数据预处理</h1>
+<h2 id="数据清洗">数据清洗</h2>
+<ul>
+<li>数据缺失
+<ul>
 <li>删除整个元组(当类标号缺少时)</li>
 <li>使用 <mark class="hl-label blue">使用属性的平均值填充空缺值</mark> </li>
 </ul>
 </li>
-<li>含有噪音,错误,或离群<ul>
+<li>含有噪音,错误,或离群
+<ul>
 <li>删除整个元组</li>
 </ul>
 </li>
-<li>不一致的代码或不符的名称<ul>
+<li>不一致的代码或不符的名称
+<ul>
 <li>替换规则修正</li>
 </ul>
 </li>
 </ul>
-<h2 id="数据集成"><a href="#数据集成" class="headerlink" title="数据集成"></a>数据集成</h2><ul>
-<li>模式集成<ul>
+<h2 id="数据集成">数据集成</h2>
+<ul>
+<li>模式集成
+<ul>
 <li>整合来自不同来源的数据</li>
 </ul>
 </li>
@@ -369,38 +395,47 @@
 <p><strong>冗余信息处理</strong></p>
 <p><strong>方法</strong>:相关分析</p>
 <ul>
-<li>离散变量<ul>
-<li>卡方检验<ul>
+<li>离散变量
+<ul>
+<li>卡方检验
+<ul>
 <li>$\mathcal{X}^2=\Sigma \frac{(Observed-Expected)^2}{Expected}$</li>
 <li>行合计乘以列合计除以总数</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>连续变量<ul>
-<li>相关系数(也成为<mark class="hl-label orange">皮尔逊相关系数</mark> <ul>
+<li>连续变量
+<ul>
+<li>相关系数(也成为<mark class="hl-label orange">皮尔逊相关系数</mark> 
+<ul>
 <li>$r_{p,q}=\frac{\Sigma{(p-\overset{-}{p})(q-\overset{-}{q})}}{(n-1)\sigma_p \sigma_q}=\frac{\Sigma(pq)-n\overset{-}{p}\overset{-}{q}}{(n-1)\sigma_p\sigma_q}$</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>协方差<ul>
+<li>协方差
+<ul>
 <li>$Cov(p,q)=E(p-\overset{-}{p})(q-\overset{-}{q})=\frac{\Sigma_{i=1}^n(p_i-\overset{-}{p})(q_i-\overset{-}{q})}{n}=E(pq)-E(p)E(q)$</li>
 <li>$r_{p,q}=\frac{Cov(p,q)}{\sigma_p\sigma_q}$</li>
 <li></li>
 </ul>
 </li>
 </ul>
-<h2 id="数据规约"><a href="#数据规约" class="headerlink" title="数据规约"></a>数据规约</h2><p><strong>数据降维</strong></p>
+<h2 id="数据规约">数据规约</h2>
+<p><strong>数据降维</strong></p>
 <ul>
-<li>原因:<ul>
+<li>原因:
+<ul>
 <li>随着维数的增加,数据变得越来越<mark class="hl-label pink">稀疏</mark> </li>
 <li>子空间的可能的<mark class="hl-label orange">组合将成倍增长</mark> </li>
 <li>机器学习模型过于复杂</li>
 </ul>
 </li>
-<li>方法:<ul>
-<li>PCA主成分分析法<ul>
+<li>方法:
+<ul>
+<li>PCA主成分分析法
+<ul>
 <li>设法将原来众多<mark class="hl-label purple">具有一定相关性的属性</mark> (比如p个属性),重新组合成一组<mark class="hl-label green">相互无关的综合属性</mark> 来代替原来属性.通常是将原来的属性<mark class="hl-label pink">线性组合</mark> 作为新的属性</li>
 </ul>
 </li>
@@ -412,14 +447,17 @@
 <li>简单随机抽样</li>
 </ul>
 <p><strong>数据压缩</strong></p>
-<h2 id="数据转换"><a href="#数据转换" class="headerlink" title="数据转换"></a>数据转换</h2><p><strong>规范化</strong>:按比例缩放至一个具体的区间</p>
+<h2 id="数据转换">数据转换</h2>
+<p><strong>规范化</strong>:按比例缩放至一个具体的区间</p>
 <ul>
-<li>最小-最大规范化<ul>
-<li>$v^{‘}=\frac{v-min_A}{max_A-min_A}(new_max_A-new_min_A)+new_min_A$</li>
+<li>最小-最大规范化
+<ul>
+<li>$v^{'}=\frac{v-min_A}{max_A-min_A}(new_max_A-new_min_A)+new_min_A$</li>
 </ul>
 </li>
-<li>Z-得分正常化(标准化):通常用于同分布流式数据(不断有新的数据进入数据仓库)<ul>
-<li>$v^{‘}=\frac{v-均值A}{标准差A}$</li>
+<li>Z-得分正常化(标准化):通常用于同分布流式数据(不断有新的数据进入数据仓库)
+<ul>
+<li>$v^{'}=\frac{v-均值A}{标准差A}$</li>
 </ul>
 </li>
 <li>小数定标规范化:移动属性A的小数点位置(移动位数依赖于<mark class="hl-label blue">A的最大值</mark> )</li>
@@ -431,27 +469,33 @@
 <li>等频法:根据取值出现的频数来划分,将属性的值域划分成若干个小区间,满足<mark class="hl-label blue">落在每个区间的样本数目相等</mark> </li>
 </ul>
 <p><strong>聚类</strong></p>
-<h1 id="朴素贝叶斯分类"><a href="#朴素贝叶斯分类" class="headerlink" title="朴素贝叶斯分类"></a>朴素贝叶斯分类</h1><h2 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h2><p><strong>分类</strong>:找出描述和区分数据类或概念的<mark class="hl-label blue">模型</mark> ,以便能够使用模型<mark class="hl-label orange">预测类标号未知对象的类标号</mark> </p>
+<h1>朴素贝叶斯分类</h1>
+<h2 id="基本概念-2">基本概念</h2>
+<p><strong>分类</strong>:找出描述和区分数据类或概念的<mark class="hl-label blue">模型</mark> ,以便能够使用模型<mark class="hl-label orange">预测类标号未知对象的类标号</mark> </p>
 <p><strong>一般过程</strong>:</p>
 <ul>
-<li>学习阶段<ul>
+<li>学习阶段
+<ul>
 <li>建立描述预先定义的数据类或概念集的分类器</li>
 <li>训练集提供了每个训练元组的类标号,分类的学习过程也称为监督许欸小</li>
 </ul>
 </li>
-<li>分类阶段<ul>
+<li>分类阶段
+<ul>
 <li>使用定义好的分类器进行分类的过程</li>
 </ul>
 </li>
 </ul>
 <p><strong>概念区分</strong></p>
 <ul>
-<li>分类与预测<ul>
+<li>分类与预测
+<ul>
 <li>分类是预测分类(离散,无序)标号</li>
 <li>预测建立连续值函数模型</li>
 </ul>
 </li>
-<li>分类与聚类<ul>
+<li>分类与聚类
+<ul>
 <li>分类是有监督学习,提供了训练元组的类标号</li>
 <li>聚类是无监督学习,不依赖有类标号的训练实例</li>
 </ul>
@@ -477,13 +521,16 @@
 <li>对缺失和噪声数据不太敏感</li>
 <li>属性如果不相关,分类效果很好</li>
 </ul>
-<h1 id="决策树分类"><a href="#决策树分类" class="headerlink" title="决策树分类"></a>决策树分类</h1><h2 id="决策树的基本概念"><a href="#决策树的基本概念" class="headerlink" title="决策树的基本概念"></a>决策树的基本概念</h2><p><strong>测试结点</strong>:</p>
+<h1>决策树分类</h1>
+<h2 id="决策树的基本概念">决策树的基本概念</h2>
+<p><strong>测试结点</strong>:</p>
 <p>表示某种作为判断条件的属性</p>
 <p><strong>分支</strong>:</p>
 <p>根据条件属性取值选取的路径</p>
 <p><strong>叶子</strong>:</p>
 <p>使判断终止的结论</p>
-<h2 id="决策树的构建方法"><a href="#决策树的构建方法" class="headerlink" title="决策树的构建方法"></a>决策树的构建方法</h2><p><strong>Hunt算法</strong></p>
+<h2 id="决策树的构建方法">决策树的构建方法</h2>
+<p><strong>Hunt算法</strong></p>
 <p>$设D_t是与节点t相关联的训练记录集$</p>
 <p><strong>算法步骤:</strong></p>
 <ul>
@@ -530,7 +577,9 @@
 <li>冗余属性不会对决策树的准确率造成不利影响</li>
 <li>决策树无法学习特征之间的线性关系:<mark class="hl-label orange">特征构造</mark> </li>
 </ul>
-<h1 id="K-Means聚类"><a href="#K-Means聚类" class="headerlink" title="K-Means聚类"></a>K-Means聚类</h1><h2 id="划分的方法"><a href="#划分的方法" class="headerlink" title="划分的方法"></a>划分的方法</h2><p><strong>划分方法</strong></p>
+<h1>K-Means聚类</h1>
+<h2 id="划分的方法">划分的方法</h2>
+<p><strong>划分方法</strong></p>
 <p>将有n个对象的数据集D划分成k个簇,并且$k\le n$</p>
 <p>满足如下的要求:</p>
 <ul>
@@ -549,19 +598,23 @@
 </ul>
 <p><strong>方法</strong>:</p>
 <ul>
-<li>启发式方法<ul>
-<li>$E=\Sigma<em>{i=1}^k \Sigma</em>{p \in C_i}(d(p,c))^2$</li>
-<li>k-均值(k-means)<ul>
+<li>启发式方法
+<ul>
+<li>$E=\Sigma_{i=1}^k \Sigma_{p \in C_i}(d(p,c))^2$</li>
+<li>k-均值(k-means)
+<ul>
 <li>每个簇用该簇中对象的均值来表示</li>
 <li>基于质心的技术</li>
 <li>收敛条件:均值点基本不变化,数据调整很小</li>
-<li>优点:<ul>
+<li>优点:
+<ul>
 <li>聚类时间快</li>
 <li>当结果簇是密集的,而簇与簇之间区别明显时,效果较好</li>
 <li>相对可扩展和有效,能对大数据集进行高校划分</li>
 </ul>
 </li>
-<li>缺点:<ul>
+<li>缺点:
+<ul>
 <li>用户必须事先指定聚类簇的个数</li>
 <li>常常终止于局部最优解</li>
 <li>只适用于数值属性聚类<mark class="hl-label blue">计算均值有意义</mark> </li>
@@ -572,8 +625,10 @@
 </li>
 </ul>
 </li>
-<li>KMeans++算法 — 解决初始点选择问题<ul>
-<li>基本原理<ul>
+<li>KMeans++算法 – 解决初始点选择问题
+<ul>
+<li>基本原理
+<ul>
 <li>从输入的数据点集合中随机选择一个点作为第一个聚类中心</li>
 <li>对于数据集中的每一个点<mark class="hl-label orange">X</mark> ,计算其与聚类中心的距离<mark class="hl-label orange">D(X)</mark> </li>
 <li>重复2和3步直到K选择一个D(X)最大的点作为新的聚类中心</li>
@@ -583,7 +638,8 @@
 </li>
 </ul>
 </li>
-<li>k-中心点(k-medoids)<ul>
+<li>k-中心点(k-medoids)
+<ul>
 <li>每个簇用接近簇中心的一个对象来表示</li>
 <li>基于代表对象的技术</li>
 </ul>
@@ -596,33 +652,43 @@
 <li>适合发现中小规模的数据库中的球状聚类</li>
 <li>对于大规模数据库和处理任意形状的聚类,这些算法需要进一步扩展.</li>
 </ul>
-<h2 id="层次的方法"><a href="#层次的方法" class="headerlink" title="层次的方法"></a>层次的方法</h2><h2 id="基于密度的方法"><a href="#基于密度的方法" class="headerlink" title="基于密度的方法"></a>基于密度的方法</h2><p><strong>DBSCAN算法</strong></p>
-<h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><h2 id="逻辑回归基本原理"><a href="#逻辑回归基本原理" class="headerlink" title="逻辑回归基本原理"></a>逻辑回归基本原理</h2><p><strong>logistic函数</strong></p>
+<h2 id="层次的方法">层次的方法</h2>
+<h2 id="基于密度的方法">基于密度的方法</h2>
+<p><strong>DBSCAN算法</strong></p>
+<h1>逻辑回归</h1>
+<h2 id="逻辑回归基本原理">逻辑回归基本原理</h2>
+<p><strong>logistic函数</strong></p>
 <p>$f(x)=\frac{e^x}{1+e^x}$</p>
-<p>$p<em>i=P(y_i=1|x</em>{i1},x<em>{i2},…,x</em>{ip})$</p>
+<p>$p_i=P(y_i=1|x_{i1},x_{i2},…,x_{ip})$</p>
 <p>取对数得:</p>
-<p>$Logit(p<em>i)=ln\frac{p_i}{1-p_i}=\alpha+\beta_1 x</em>{i1}+\beta<em>2 x</em>{i2}+…+\beta<em>p x</em>{ip}$</p>
+<p>$Logit(p_i)=ln\frac{p_i}{1-p_i}=\alpha+\beta_1 x_{i1}+\beta_2 x_{i2}+…+\beta_p x_{ip}$</p>
 <p><strong>优势比OR(odds ratio)</strong></p>
 <ul>
 <li>流行病学衡量危险因素作用大小的<mark class="hl-label orange">比数比例</mark> 指标.</li>
 <li>计算公式为:</li>
 </ul>
 <p>$OR_j=\frac{ \frac{P_1}{1-P_1}}{ \frac{P_0}{1-P_0}}$</p>
-<h2 id="逻辑回归正则化"><a href="#逻辑回归正则化" class="headerlink" title="逻辑回归正则化"></a>逻辑回归正则化</h2><p><strong>权值系数w希望越小越好</strong></p>
+<h2 id="逻辑回归正则化">逻辑回归正则化</h2>
+<p><strong>权值系数w希望越小越好</strong></p>
 <p><strong>正则化表达式</strong></p>
 <ul>
 <li>$L_1=\Sigma \vert{w_i}\vert$,倾向于使w要么取1,要么取0,即<mark class="hl-label orange">稀疏编码</mark> </li>
 <li>$L_2=\Sigma w_i^2$,倾向于使得w整体偏小,即<mark class="hl-label pink">岭回归</mark> </li>
 </ul>
-<h1 id="关联规则挖掘"><a href="#关联规则挖掘" class="headerlink" title="关联规则挖掘"></a>关联规则挖掘</h1><h2 id="关联规则挖掘的概念与基本算法"><a href="#关联规则挖掘的概念与基本算法" class="headerlink" title="关联规则挖掘的概念与基本算法"></a>关联规则挖掘的概念与基本算法</h2><p><strong>关联分析</strong></p>
+<h1>关联规则挖掘</h1>
+<h2 id="关联规则挖掘的概念与基本算法">关联规则挖掘的概念与基本算法</h2>
+<p><strong>关联分析</strong></p>
 <p>用于发现隐藏在大型数据集中令人感兴趣的联系,所发现的模式通常用<mark class="hl-label orange">关联规则或频繁项集</mark> 的形式表示</p>
 <p><strong>项集(Itemset)</strong></p>
 <ul>
-<li><p>包含0个或多个项的集合</p>
+<li>
+<p>包含0个或多个项的集合</p>
 </li>
-<li><p>例子{Milk,Bread,Diaper}</p>
+<li>
+<p>例子{Milk,Bread,Diaper}</p>
 </li>
-<li><p>k-项集:一个项集包含k个项</p>
+<li>
+<p>k-项集:一个项集包含k个项</p>
 </li>
 </ul>
 <p><strong>支持度计数(Support count)($\sigma$)</strong></p>
@@ -643,27 +709,32 @@
 </ul>
 <p><strong>关联规则的强度</strong></p>
 <ul>
-<li>支持度Support(s)<ul>
+<li>支持度Support(s)
+<ul>
 <li>确定项集的频繁程度</li>
 </ul>
 </li>
-<li>置信度Confidence(c)<ul>
+<li>置信度Confidence©
+<ul>
 <li>确定Y在包含X的事务中出现的频繁程度</li>
 </ul>
 </li>
 </ul>
 <p><strong>步骤</strong></p>
 <ul>
-<li>频繁项集的产生(Frequent Itemset Generation) <ul>
+<li>频繁项集的产生(Frequent Itemset Generation)
+<ul>
 <li>其目标是发现满足最小支持度阈值的所有项集,这些项集称作频繁项集</li>
 </ul>
 </li>
-<li>规则的产生(Rule Generation) <ul>
+<li>规则的产生(Rule Generation)
+<ul>
 <li>其目标是从上一步发现的频繁项集中提取所有高置信度的规则,这些规则被称作<mark class="hl-label blue">强规则</mark> </li>
 </ul>
 </li>
 </ul>
-<h2 id="Apriori算法"><a href="#Apriori算法" class="headerlink" title="Apriori算法"></a>Apriori算法</h2><p><strong>先验原理</strong></p>
+<h2 id="Apriori算法">Apriori算法</h2>
+<p><strong>先验原理</strong></p>
 <ul>
 <li>如果一个项集是频繁的,则它的所有<mark class="hl-label red">子集</mark> 一定也是频繁的</li>
 <li>相反,如果一个项集是非频繁的,则它的所<mark class="hl-label red">超集</mark> 也一定是非频繁的</li>
@@ -685,7 +756,8 @@
 <li>划分</li>
 <li>采样</li>
 </ul>
-<h2 id="FPGrowth算法"><a href="#FPGrowth算法" class="headerlink" title="FPGrowth算法"></a>FPGrowth算法</h2><p><strong>基本思想</strong></p>
+<h2 id="FPGrowth算法">FPGrowth算法</h2>
+<p><strong>基本思想</strong></p>
 <ul>
 <li>只扫描数据库两遍,构造频繁模式树(FP-Tree)</li>
 <li>自底向上递归产生频繁项集</li>
@@ -699,18 +771,43 @@
 </ul>
 <p><strong>特点</strong></p>
 <ul>
-<li>完备<ul>
+<li>完备
+<ul>
 <li>不会打破交易中的任何模式</li>
 <li>包含了频繁模式挖掘所需的全部信息</li>
 </ul>
 </li>
-<li>紧密<ul>
-<li>支持度降序排列：支持度高的项在FP-tree中共享的机会也高</li>
+<li>紧密
+<ul>
+<li>支持度降序排列：支持度高的项在FP-tree中共享的机会也高.</li>
 <li>绝不会比原数据库大.</li>
 </ul>
 </li>
 </ul>
-<h2 id="规则挖掘"><a href="#规则挖掘" class="headerlink" title="规则挖掘"></a>规则挖掘</h2><h1 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h1><h2 id="支持向量机的数学原理"><a href="#支持向量机的数学原理" class="headerlink" title="支持向量机的数学原理"></a>支持向量机的数学原理</h2><h2 id="支持向量机扩展"><a href="#支持向量机扩展" class="headerlink" title="支持向量机扩展"></a>支持向量机扩展</h2><h1 id="神经网络分类"><a href="#神经网络分类" class="headerlink" title="神经网络分类"></a>神经网络分类</h1><h2 id="神经网络基础概念"><a href="#神经网络基础概念" class="headerlink" title="神经网络基础概念"></a>神经网络基础概念</h2><h2 id="神经网络数学原理"><a href="#神经网络数学原理" class="headerlink" title="神经网络数学原理"></a>神经网络数学原理</h2><h1 id="集成学习"><a href="#集成学习" class="headerlink" title="集成学习"></a>集成学习</h1><h2 id="Bagging分类"><a href="#Bagging分类" class="headerlink" title="Bagging分类"></a>Bagging分类</h2><h2 id="随机森林分类"><a href="#随机森林分类" class="headerlink" title="随机森林分类"></a>随机森林分类</h2><h2 id="Boosting分类基础"><a href="#Boosting分类基础" class="headerlink" title="Boosting分类基础"></a>Boosting分类基础</h2><h2 id="Boosting分类理论"><a href="#Boosting分类理论" class="headerlink" title="Boosting分类理论"></a>Boosting分类理论</h2><h2 id="GBDT学习"><a href="#GBDT学习" class="headerlink" title="GBDT学习"></a>GBDT学习</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://UESTC-Majialu.github.io">MaJialu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://uestc-majialu.github.io/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">http://uestc-majialu.github.io/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://UESTC-Majialu.github.io" target="_blank">马嘉路</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/11/test/" title="test"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">test</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/13/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" title="LeetCode每日一题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">LeetCode每日一题</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MaJialu</div><div class="author-info__description">长风破浪会有时，直挂云帆济沧海!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/UESTC-Majialu"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/UESTC-Majialu" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1835027607@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我的个人博客，暂时还没啥公告</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="toc-number">1.1.</span> <span class="toc-text">数据挖掘的由来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text">主要内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E6%95%B0%E6%8D%AE"><span class="toc-number">2.</span> <span class="toc-text">认识数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E6%B1%87%E6%80%BB"><span class="toc-number">2.2.</span> <span class="toc-text">数据统计汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%92%8C%E7%9B%B8%E5%BC%82%E6%80%A7%E5%BA%A6%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">数据相似性和相异性度量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">数据预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97"><span class="toc-number">3.1.</span> <span class="toc-text">数据清洗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90"><span class="toc-number">3.2.</span> <span class="toc-text">数据集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%84%E7%BA%A6"><span class="toc-number">3.3.</span> <span class="toc-text">数据规约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">数据转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">朴素贝叶斯分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-1"><span class="toc-number">4.1.</span> <span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E5%88%86%E7%B1%BB"><span class="toc-number">5.</span> <span class="toc-text">决策树分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">5.1.</span> <span class="toc-text">决策树的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">决策树的构建方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#K-Means%E8%81%9A%E7%B1%BB"><span class="toc-number">6.</span> <span class="toc-text">K-Means聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%92%E5%88%86%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">划分的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">层次的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%AF%86%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.3.</span> <span class="toc-text">基于密度的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="toc-number">7.</span> <span class="toc-text">逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text">逻辑回归基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">7.2.</span> <span class="toc-text">逻辑回归正则化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="toc-number">8.</span> <span class="toc-text">关联规则挖掘</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95"><span class="toc-number">8.1.</span> <span class="toc-text">关联规则挖掘的概念与基本算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apriori%E7%AE%97%E6%B3%95"><span class="toc-number">8.2.</span> <span class="toc-text">Apriori算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FPGrowth%E7%AE%97%E6%B3%95"><span class="toc-number">8.3.</span> <span class="toc-text">FPGrowth算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="toc-number">8.4.</span> <span class="toc-text">规则挖掘</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-number">9.</span> <span class="toc-text">支持向量机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">9.1.</span> <span class="toc-text">支持向量机的数学原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%E6%89%A9%E5%B1%95"><span class="toc-number">9.2.</span> <span class="toc-text">支持向量机扩展</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB"><span class="toc-number">10.</span> <span class="toc-text">神经网络分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">10.1.</span> <span class="toc-text">神经网络基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">10.2.</span> <span class="toc-text">神经网络数学原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0"><span class="toc-number">11.</span> <span class="toc-text">集成学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bagging%E5%88%86%E7%B1%BB"><span class="toc-number">11.1.</span> <span class="toc-text">Bagging分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%88%86%E7%B1%BB"><span class="toc-number">11.2.</span> <span class="toc-text">随机森林分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boosting%E5%88%86%E7%B1%BB%E5%9F%BA%E7%A1%80"><span class="toc-number">11.3.</span> <span class="toc-text">Boosting分类基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boosting%E5%88%86%E7%B1%BB%E7%90%86%E8%AE%BA"><span class="toc-number">11.4.</span> <span class="toc-text">Boosting分类理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GBDT%E5%AD%A6%E4%B9%A0"><span class="toc-number">11.5.</span> <span class="toc-text">GBDT学习</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法">数据结构与算法</a><time datetime="2024-05-20T11:45:25.000Z" title="发表于 2024-05-20 19:45:25">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/Java/" title="Java">Java</a><time datetime="2024-05-20T02:44:38.000Z" title="发表于 2024-05-20 10:44:38">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/13/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" title="LeetCode每日一题">LeetCode每日一题</a><time datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" title="大数据挖掘与数据分析笔记">大数据挖掘与数据分析笔记</a><time datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/11/test/" title="test">test</a><time datetime="2024-05-11T01:28:24.000Z" title="发表于 2024-05-11 09:28:24">2024-05-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By MaJialu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+<h2 id="规则挖掘">规则挖掘</h2>
+<h1>支持向量机</h1>
+<h2 id="支持向量机的数学原理">支持向量机的数学原理</h2>
+<h2 id="支持向量机扩展">支持向量机扩展</h2>
+<h1>神经网络分类</h1>
+<h2 id="神经网络基础概念">神经网络基础概念</h2>
+<p><strong>感知机</strong></p>
+<p><strong>多重感知机</strong></p>
+<p><strong>误差反向传播神经网络</strong></p>
+<p><strong>激活函数</strong></p>
+<p><strong>步骤</strong></p>
+<ul>
+<li>初始化权重</li>
+<li>向前传播输入</li>
+<li>向后传播误差</li>
+</ul>
+<h2 id="神经网络数学原理">神经网络数学原理</h2>
+<h1>集成学习</h1>
+<h2 id="Bagging分类">Bagging分类</h2>
+<h2 id="随机森林分类">随机森林分类</h2>
+<h2 id="Boosting分类基础">Boosting分类基础</h2>
+<h2 id="Boosting分类理论">Boosting分类理论</h2>
+<h2 id="GBDT学习">GBDT学习</h2>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://UESTC-Majialu.github.io">MaJialu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://uestc-majialu.github.io/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">http://uestc-majialu.github.io/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://UESTC-Majialu.github.io" target="_blank">马嘉路</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/11/test/" title="test"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">test</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/13/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" title="LeetCode每日一题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">LeetCode每日一题</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MaJialu</div><div class="author-info__description">长风破浪会有时，直挂云帆济沧海!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/UESTC-Majialu"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/UESTC-Majialu" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1835027607@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我的个人博客，暂时还没啥公告</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%9A%84%E7%94%B1%E6%9D%A5"><span class="toc-number">1.1.</span> <span class="toc-text">数据挖掘的由来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text">主要内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">认识数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E6%B1%87%E6%80%BB"><span class="toc-number">2.2.</span> <span class="toc-text">数据统计汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%92%8C%E7%9B%B8%E5%BC%82%E6%80%A7%E5%BA%A6%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">数据相似性和相异性度量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">数据预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97"><span class="toc-number">3.1.</span> <span class="toc-text">数据清洗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90"><span class="toc-number">3.2.</span> <span class="toc-text">数据集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A7%84%E7%BA%A6"><span class="toc-number">3.3.</span> <span class="toc-text">数据规约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">数据转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">朴素贝叶斯分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-2"><span class="toc-number">4.1.</span> <span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">决策树分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">5.1.</span> <span class="toc-text">决策树的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E6%9E%84%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">决策树的构建方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">K-Means聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%92%E5%88%86%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">划分的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">层次的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%AF%86%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">6.3.</span> <span class="toc-text">基于密度的方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">7.1.</span> <span class="toc-text">逻辑回归基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">7.2.</span> <span class="toc-text">逻辑回归正则化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">关联规则挖掘</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98%E7%9A%84%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95"><span class="toc-number">8.1.</span> <span class="toc-text">关联规则挖掘的概念与基本算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apriori%E7%AE%97%E6%B3%95"><span class="toc-number">8.2.</span> <span class="toc-text">Apriori算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FPGrowth%E7%AE%97%E6%B3%95"><span class="toc-number">8.3.</span> <span class="toc-text">FPGrowth算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="toc-number">8.4.</span> <span class="toc-text">规则挖掘</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">支持向量机</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%E7%9A%84%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">9.1.</span> <span class="toc-text">支持向量机的数学原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%E6%89%A9%E5%B1%95"><span class="toc-number">9.2.</span> <span class="toc-text">支持向量机扩展</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">神经网络分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">10.1.</span> <span class="toc-text">神经网络基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%95%B0%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">10.2.</span> <span class="toc-text">神经网络数学原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">集成学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bagging%E5%88%86%E7%B1%BB"><span class="toc-number">11.1.</span> <span class="toc-text">Bagging分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%88%86%E7%B1%BB"><span class="toc-number">11.2.</span> <span class="toc-text">随机森林分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boosting%E5%88%86%E7%B1%BB%E5%9F%BA%E7%A1%80"><span class="toc-number">11.3.</span> <span class="toc-text">Boosting分类基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boosting%E5%88%86%E7%B1%BB%E7%90%86%E8%AE%BA"><span class="toc-number">11.4.</span> <span class="toc-text">Boosting分类理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GBDT%E5%AD%A6%E4%B9%A0"><span class="toc-number">11.5.</span> <span class="toc-text">GBDT学习</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法">数据结构与算法</a><time datetime="2024-05-20T11:45:25.000Z" title="发表于 2024-05-20 19:45:25">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/Java/" title="Java">Java</a><time datetime="2024-05-20T02:44:38.000Z" title="发表于 2024-05-20 10:44:38">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/13/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" title="LeetCode每日一题">LeetCode每日一题</a><time datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/13/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" title="大数据挖掘与数据分析笔记">大数据挖掘与数据分析笔记</a><time datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/11/test/" title="test">test</a><time datetime="2024-05-11T01:28:24.000Z" title="发表于 2024-05-11 09:28:24">2024-05-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By MaJialu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
   window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
