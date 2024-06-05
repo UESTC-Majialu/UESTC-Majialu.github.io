@@ -66,3 +66,4 @@ var merge = function(nums1, m, nums2, n) {
 - 空间复杂度: **O(log(m+n))**
   - 排序序列长度为m+n,套用快速排序的空间复杂度即可,平均情况为 **O(log(m+n))**
 
+测试
