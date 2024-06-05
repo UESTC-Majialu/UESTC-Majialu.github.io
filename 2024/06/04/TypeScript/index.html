@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>TypeScript | 马嘉路</title><meta name="author" content="MaJialu,1835027607@qq.com"><meta name="copyright" content="MaJialu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="TypeScript简介优势 更早发现错误，提高效率 任何位置都有代码提示 重构代码容易 支持最新ECMAScript语法 类型推断机制  常用类型类型注解作用：为变量添加类型约束  JS已有类型  原始类型 number string boolean null undefined symbol    完全按照JS中类型名称，加上注解即可 123456let age: number &#x3D; 18let">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript">
+<meta property="og:url" content="http://uestc-majialu.github.io/2024/06/04/TypeScript/index.html">
+<meta property="og:site_name" content="马嘉路">
+<meta property="og:description" content="TypeScript简介优势 更早发现错误，提高效率 任何位置都有代码提示 重构代码容易 支持最新ECMAScript语法 类型推断机制  常用类型类型注解作用：为变量添加类型约束  JS已有类型  原始类型 number string boolean null undefined symbol    完全按照JS中类型名称，加上注解即可 123456let age: number &#x3D; 18let">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://uestc-majialu.github.io/img/avatar.png">
+<meta property="article:published_time" content="2024-06-04T14:23:05.000Z">
+<meta property="article:modified_time" content="2024-06-05T10:09:34.262Z">
+<meta property="article:author" content="MaJialu">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://uestc-majialu.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://uestc-majialu.github.io/2024/06/04/TypeScript/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TypeScript',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-05 18:09:34'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.com/hexo-butterfly-tag-plugins-plus-chinese@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.com/hexo-butterfly-tag-plugins-plus-chinese@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.com/hexo-butterfly-tag-plugins-plus-chinese@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/bgc.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="马嘉路"><img class="site-icon" src="/img/favicon.png"/><span class="site-name">马嘉路</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">TypeScript</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-04T14:23:05.000Z" title="发表于 2024-06-04 22:23:05">2024-06-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-05T10:09:34.262Z" title="更新于 2024-06-05 18:09:34">2024-06-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="TypeScript"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="TypeScript简介"><a href="#TypeScript简介" class="headerlink" title="TypeScript简介"></a>TypeScript简介</h1><h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ul>
+<li>更早发现错误，提高效率</li>
+<li>任何位置都有代码提示</li>
+<li>重构代码容易</li>
+<li>支持最新ECMAScript语法</li>
+<li>类型推断机制</li>
+</ul>
+<h1 id="常用类型"><a href="#常用类型" class="headerlink" title="常用类型"></a>常用类型</h1><h2 id="类型注解"><a href="#类型注解" class="headerlink" title="类型注解"></a>类型注解</h2><p><strong>作用</strong>：为变量<mark class="hl-label orange">添加类型约束</mark> </p>
+<p><strong>JS已有类型</strong></p>
+<ul>
+<li>原始类型<ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbol</li>
+</ul>
+</li>
+</ul>
+<p>完全按照JS中类型名称，加上注解即可</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">age</span>: <span class="built_in">number</span> = <span class="number">18</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">myName</span>: <span class="built_in">string</span> = <span class="string">&#x27;刘老师&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">isLoading</span>: <span class="built_in">boolean</span> = <span class="literal">false</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">a</span>: <span class="literal">null</span> = <span class="literal">null</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">b</span>: <span class="literal">undefined</span> = <span class="literal">undefined</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">s</span>: <span class="built_in">symbol</span> = <span class="title class_">Symbol</span>()</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>对象类型</p>
+<ul>
+<li><p>object(数组，对象，函数)</p>
+</li>
+<li><p>数组</p>
+<ul>
+<li>```ts<br>let number: number[] = [1,3,5]<br>let strings: Array<string> = [‘a’,’b’,’c’]<br>let arr: (number | string)[] = [1,’a’,3,’b’]<br>// |(竖线)在TS中叫做联合类型（由两个或多个其他类型组成的类型，表示可以是这些中的任意一种，注意不要和js中的或(||)混淆<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**TS新增类型**</span><br><span class="line"></span><br><span class="line">- 联合类型</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    let arr: (number | string)[] = [1,&#x27;a&#x27;,3,&#x27;b&#x27;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>自定义类型（类型别名）</p>
+<ul>
+<li>```ts<br>type CustomArray = (number | string)[]<br>let arr1: CustomArray = [1,’a’,3,’b’]<br>let arr2: CustomArray = [‘x’,’y’,6,7]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 函数类型</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    //单独指定参数,返回值类型</span><br><span class="line">    function add(num1:number,num2:number): number&#123;</span><br><span class="line">        return num1 + num2</span><br><span class="line">    &#125;</span><br><span class="line">    const add = (num1:number, num2:number):number=&gt;&#123;</span><br><span class="line">        return num1 + num2</span><br><span class="line">    &#125;</span><br><span class="line">    //同时指定参数,返回值的类型</span><br><span class="line">    const add: (num1: number, num2:number) =&gt; number = (num1,num2)=&gt;&#123;</span><br><span class="line">        return num1 + num2</span><br><span class="line">    &#125;</span><br><span class="line">    // 没有返回值,函数返回类型为void</span><br><span class="line">    function greet(name:string):void &#123;</span><br><span class="line">        console.log(&#x27;Hello&#x27;,name)</span><br><span class="line">    &#125;</span><br><span class="line">    // 可选参数</span><br><span class="line">    function mySlice(start?: number, end?:number): void &#123;</span><br><span class="line">        console.log(&#x27;起始索引:&#x27;,start,&#x27;结束索引:&#x27;,end)</span><br><span class="line">    &#125;</span><br><span class="line">    //注意:可选参数智能出现在参数列表的最后,即可选参数后面不能再出现必选参数</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>对象类型</p>
+<ul>
+<li>```ts<br>let person: {<pre><code>name: string;
+age: number;
+sayHi(): void
+</code></pre>} = {<pre><code>name: &#39;jack&#39;,
+age: 19,
+sayHi()&#123;&#125;
+</code></pre>}<br>//可选属性<br>function myAxios(config:{url: string; method?:string}):void{<pre><code>console.log(config)
+</code></pre>}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 接口</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    //1.使用interface关键字来声明接口</span><br><span class="line">    //2.接口名称可以是任意合法的变量名称</span><br><span class="line">    //3.声明接口后,直接使用接口名称作为变量的类型</span><br><span class="line">    //4.因为每一行只有一个属性,因此属性类型后面没有;</span><br><span class="line">    interface IPerson &#123;</span><br><span class="line">        name: string</span><br><span class="line">        age: number</span><br><span class="line">        sayHi(): void</span><br><span class="line">    &#125;</span><br><span class="line">    let person: IPerson = &#123;</span><br><span class="line">        name: &#x27;jack&#x27;,</span><br><span class="line">        age: 19,</span><br><span class="line">        sayHi()&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    //接口和类型别名的区别</span><br><span class="line">    type IPerson = &#123;</span><br><span class="line">        name: string</span><br><span class="line">        age: number</span><br><span class="line">        sayHi(): void</span><br><span class="line">    &#125;</span><br><span class="line">    //相同点: 都可以为对象指定类型</span><br><span class="line">    //不同点:</span><br><span class="line">    //	1. 接口只能为对象指定类型</span><br><span class="line">    //	2. 类型别名,不仅可以为对象指定类型,实际上可以为任意类型指定别名</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    //接口的继承</span><br><span class="line">    interface Point2D &#123;x: number; y:number&#125;</span><br><span class="line">    interface Point3D &#123;x: number; y:number; z:number&#125;</span><br><span class="line">    //更好的方式</span><br><span class="line">    interface Point2D &#123;x: number; y:number&#125;</span><br><span class="line">    interface Point3D extends Point2D &#123;z: number&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>元组</p>
+<ul>
+<li><p>场景: 在地图中,使用经纬度来坐标来标记位置信息</p>
+</li>
+<li><p>可以使用数组来记录坐标,那么该数组中只有两个元素,并且这两个元素都是数值类型</p>
+</li>
+<li><p>```ts<br>let position:number[] = [39,56]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 使用number[]的缺点,不严谨,因为该类型的数组中可以出现任意多个数字</span><br><span class="line"></span><br><span class="line">- 更好的方式: 元组(Tuple)</span><br><span class="line"></span><br><span class="line">- 元组类型是另一种类型的数组,它确切地知道包含多少个元素,以及特定索引对应的类型</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  let position: [number,number] = [39,56]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>类型断言</p>
+<ul>
+<li><p>```ts<br>const alink = document.getElementById(‘link’) as HTMLAnchorElement<br>// 1. 使用 as 关键字实现类型断言<br>// 2. 关键字 as 后面的类型是一个更加具体的类型<br>// 3. 通过类型断言,alink的类型变得更加具体,<br>// 另一种语法,使用&lt;&gt;语法<br>const alink = <HTMLAnchorElement>document.getElementById(‘link’)<br>// 技巧:在浏览器控制台,通过console.dir()打印DOM元素,在属性列表的最后面,即可看到该元素的类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 字面量类型</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    let str = &#x27;Hello TS&#x27; //str为string类型</span><br><span class="line">    </span><br><span class="line">    const str2 = &#x27;Hello TS&#x27; //str为&quot;Hello TS&quot;类型</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用模式: 字面量类型配合联合类型一起使用</p>
+</li>
+<li><p>使用场景: 用来表示一组明确的可选值列表</p>
+</li>
+<li><p>比如,在贪吃蛇游戏中,游戏的方向的可选值只能是上下左右中的任意一个</p>
+</li>
+<li><p>```ts<br>function changeDirection(direction: ‘up’|’down’|’left’|’right’){</p>
+<pre><code>console.log(direction)
+</code></pre><p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- 枚举</span><br><span class="line"></span><br><span class="line">  - 类似字面量加联合类型组合</span><br><span class="line"></span><br><span class="line">  - 1.使用 enum 关键字定义枚举</span><br><span class="line"></span><br><span class="line">  - 2.约定枚举名称,枚举中的值以大写字母开头</span><br><span class="line"></span><br><span class="line">  - 3.枚举中的多个值之间用逗号分隔</span><br><span class="line"></span><br><span class="line">  - 4.定义好枚举后,直接使用枚举名称作为类型注解</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    enum Direction &#123;Up,Down,Left,Right&#125;</span><br><span class="line">    </span><br><span class="line">    function changeDirection(direction: Direction) &#123;</span><br><span class="line">        console.log(direction)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //类似于js中的对象,使用点(.)语法就可以访问枚举的成员</span><br><span class="line">    console.log(Direction.Up)</span><br><span class="line">    //字符串枚举</span><br><span class="line">    enum Direction &#123;</span><br><span class="line">        Up = &#x27;Up&#x27;,</span><br><span class="line">        Down = &#x27;Down&#x27;,</span><br><span class="line">        Left = &#x27;Left&#x27;,</span><br><span class="line">        Right = &#x27;Right&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">    //注意字符串没有自增长欣慰,因此字符串枚举的每个成员必须有初始值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>void</p>
+</li>
+<li><p>any</p>
+</li>
+</ul>
+<h2 id="高级类型"><a href="#高级类型" class="headerlink" title="高级类型"></a>高级类型</h2><ul>
+<li><p>class类</p>
+<ul>
+<li><p>```ts<br>// 实例属性初始化<br>class Person {</p>
+<pre><code>age: number
+gender: string = &#39;male&#39;
+</code></pre><p>}</p>
+<p>//构造函数<br>class Person {</p>
+<pre><code>age: number
+gender: string
+
+constructor(age:number,gender:string) &#123;
+    this.age = age
+    this.gender = gender
+&#125;
+</code></pre><p>}</p>
+<p>//实例方法<br>class Point {</p>
+<pre><code>x = 10
+y = 10
+
+scale(n:number):void&#123;
+    this.x *= n
+    this.y *= n
+&#125;
+</code></pre><p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 类的继承</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  //1. extends 继承父类</span><br><span class="line">  //2. implements(实现接口)</span><br><span class="line">  </span><br><span class="line">  //1.继承父类</span><br><span class="line">  class Animal &#123;</span><br><span class="line">      move()&#123;console.log(&#x27;Moving along!&#x27;)&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  class Dog extends Animal &#123;</span><br><span class="line">      bark() &#123; console.log(&#x27;汪!&#x27;)&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  const dog = new Dog()</span><br><span class="line">  </span><br><span class="line">  //2.实现接口</span><br><span class="line">  interface Singable &#123;</span><br><span class="line">      sing(): void</span><br><span class="line">  &#125;</span><br><span class="line">  class Person implements Singable &#123;</span><br><span class="line">      sing() &#123;</span><br><span class="line">          console.log(&#x27;你是我的小苹果&#x27;)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类成员的可见性</p>
+</li>
+<li><p>```ts<br>// 1. public:公有的,可以在任何地方访问<br>// 2. protected:受保护的,在其声明的类和字类中可见,实例对象不可见<br>// 3. private:私有的,只在当前类中可见,字类和实例中均不可见<br>// 4. readonly:只读属性,只能用构造函数赋值,其他方法不行,接口或者{}表示的对象类型,也可以使用readonly<br>class Person {</p>
+<pre><code>readonly age:number = 18
+constructor(age: number) &#123;
+    this.age = age
+&#125;
+</code></pre><p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 类型兼容性</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  //1. Structural Type System(结构化类型系统)</span><br><span class="line">  //2. Nominal Type System(标明类型系统)</span><br><span class="line">  // TS采用第一种也叫 duck typing(鸭子类型)</span><br><span class="line">  class Point &#123;</span><br><span class="line">    x: number</span><br><span class="line">    y: number</span><br><span class="line">  &#125;</span><br><span class="line">  class Point2D &#123;</span><br><span class="line">    x: number</span><br><span class="line">    y: number</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  const p:Point = new Point2D()</span><br><span class="line">  //不会报错</span><br><span class="line">  //因为两个类的属性数目和类型均相同</span><br><span class="line">  //更准确的说,对于对象类型,如果x是y的子集,则x兼容y,y的实例可以赋值给x(成员多的可以赋值给少的)</span><br><span class="line">  class Point &#123;x: number;y: number&#125;</span><br><span class="line">  class Point3D &#123;x: number;y:number;z:number&#125;</span><br><span class="line">  const p:Point = new Point3D()</span><br><span class="line">  </span><br><span class="line">  //接口兼容性</span><br><span class="line">  interface Point &#123;</span><br><span class="line">    x: number</span><br><span class="line">    y: number</span><br><span class="line">  &#125;</span><br><span class="line">  interface Point2D &#123;</span><br><span class="line">    x: number</span><br><span class="line">    y: number</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let p1: Point = &#123; x: 1, y: 2 &#125;</span><br><span class="line">  let p2: Point2D = p1</span><br><span class="line">  console.log(p2.x, p2.y)</span><br><span class="line">  </span><br><span class="line">  //函数兼容性</span><br><span class="line">  // 1.参数个数 2.参数类型 3.返回值类型</span><br><span class="line">  </span><br><span class="line">  // 1. 参数个数:参数少的可以赋值给参数多的</span><br><span class="line">  type F1 = (a:number) =&gt; void</span><br><span class="line">  type F2 = (a:number, b:number)=&gt;void</span><br><span class="line">  let f1: F1</span><br><span class="line">  let f2: F2 = f1</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  //2.参数类型:相同位置的参数类型要相同(原始类型)或兼容(对象类型)</span><br><span class="line">  </span><br><span class="line">  //3.返回值类型,关注返回值本身就行</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>交叉类型</p>
+</li>
+<li><p>```TS<br>//交叉类型(&amp;): 功能类似接口继承(extends),用于组合多个类型为一个类型(常用于对象类型)<br>interface Person {name: string}<br>interface Contact {phone: string}<br>type PersonDetail = Person &amp; Contact<br>const obj: PersonDetail = {</p>
+<pre><code>name: &#39;Tom&#39;,
+phone: &#39;123456&#39;
+</code></pre><p>}<br>//交叉类型(&amp;)和接口继承(extends)的对比<br>// 相同点: 都可以实现对象类型的组合<br>// 不同点: 两种方式实现类型组合时,对于同名属性之间,处理类型冲突的方式不同<br>interface A {fn:(value:number)=&gt;string}<br>interface B extends A {fn:(value:string)=&gt;string} //报错,参数类型不兼容<br>typeC = A &amp; B //不报错<br>//相当于<br>fn:(value:string | number)=&gt; string</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 泛型</span><br><span class="line"></span><br><span class="line">  - 泛型就是在保证类型安全的前提下,让函数等多种类型一起工作,从而实现复用,常用于函数,接口,class中</span><br><span class="line"></span><br><span class="line">  - 需求: 创建一个id函数,传入什么数据就返回该数据本身(也就是说,返回值类型和参数相同)</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    function id(value: number):number &#123;return value&#125;</span><br><span class="line">    //上例只能接收数值类型,无法用于其他类型</span><br><span class="line">    //下例将参数类型修改为any,不安全</span><br><span class="line">    function id(value: any):any &#123;return value&#125;</span><br><span class="line">    </span><br><span class="line">    //创建泛型函数</span><br><span class="line">    function id&lt;Type&gt;(value:Type):Type &#123;return value&#125;</span><br><span class="line">    //1.语法: 在函数名称的后面添加&lt;&gt;(尖括号),尖括号中添加类型变量,比如此处的Type</span><br><span class="line">    //2.类型变量Type,是一种特殊类型的变量,他处理类型而不是值</span><br><span class="line">    //3.该类型变量相当于一个类型容器,能够捕获用户提供的类型(具体是什么类型由用户调用该函数时指定)</span><br><span class="line">    //4.类型变量Type,可以是任意合法的变量名称</span><br><span class="line">    const num:number = id&lt;number&gt;(10)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>简化调用泛型函数</p>
+</li>
+<li><p>```ts<br>function id<Type>(value: Type): Type {return value}</p>
+<p>//原来调用<br>let num: number<br>let num = id<number>(10)</p>
+<p>//简化调用<br>let num:number<br>let num = id(10)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 泛型约束</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  //默认情况下,Type可以代表多个类型,这导致无法访问任何属性</span><br><span class="line">  //比如,id(&#x27;a&#x27;)调用函数时获取参数的长度</span><br><span class="line">  function id&lt;Type&gt;(value:Type): Type &#123;</span><br><span class="line">      console.log(value.length)//报错,找不到length属性</span><br><span class="line">      return value</span><br><span class="line">  &#125;</span><br><span class="line">  //1.指定更加具体的类型</span><br><span class="line">  function id&lt;Type&gt;(value: Type[]): Type[] &#123;</span><br><span class="line">      console.log(value.length)</span><br><span class="line">      return value</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  //2.添加约束</span><br><span class="line">  </span><br><span class="line">  //解释:</span><br><span class="line">  //1.创建描述约束的接口ILength,该接口要求提供length属性</span><br><span class="line">  //2.通过extends关键字使用该接口,为泛型(类型变量)添加约束</span><br><span class="line">  //3. 该约束表示:传入的类型必须具有length属性</span><br><span class="line">  interface ILength &#123;length:number&#125;</span><br><span class="line">  function id&lt;Type extends ILength&#125;(value: Type):Type &#123;</span><br><span class="line">      consoloe.log(value.length)</span><br><span class="line">      return value</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多个泛型变量</p>
+</li>
+<li><p>```ts<br>function getProp<Type, Key extends keyof Type>(obj:Type, key: Key){</p>
+<pre><code>return obj[key]
+</code></pre><p>}<br>let person = {name: ‘jack’, age: 18}<br>getProp(person,’name’)</p>
+<p>//解释<br>//1.添加了第二个类型变量 Key,两个类型变量之间用(,)逗号分隔<br>//2.keyof关键字接收一个对象类型,生成其键名称(可能是字符串或数字)的联合类型<br>//3.本示例中keyof Type实际上获取的是person对象所有键的联合类型,也就是:’name|age’<br>//4.类型变量Key受Type约束,可以理解为: Key只能是Type所有键中的任意一个,或者说之恶能访问对象中存在的属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 泛型接口</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  interface IdFunc&lt;Type&gt; &#123;</span><br><span class="line">      id: (value:Type) =&gt; Type</span><br><span class="line">      ids: () =&gt; Type[]</span><br><span class="line">  &#125;</span><br><span class="line">  let obj: IdFunc&lt;number&gt; = &#123;</span><br><span class="line">      id(value) &#123;return value&#125;</span><br><span class="line">      ids() &#123;return [1,2,3]&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  //解释</span><br><span class="line">  //1.在接口名称的后面添加&lt;类型变量&gt;,那么这个接口就变成了泛型接口</span><br><span class="line">  //2.接口的类型变量,对接口中多有其他成员可见</span><br><span class="line">  //3.使用泛型接口时,需要显示指定具体的类型,比如此处的IdFun&lt;number&gt;</span><br><span class="line">  //4.此时,id方法的参数和返回值类型都是number,ids方法的返回值类型是number[]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>泛型类</p>
+</li>
+<li><p>```react<br>interface IState {count: number}<br>interface IProps {maxLength: number}<br>class InputCount extends React.Component<IProps,Istate>{</p>
+<pre><code>state: IState = &#123;count: 0&#125;
+render()&#123;
+    return &lt;div&gt;&#123;this.props.maxLength&#125;&lt;/div&gt;
+&#125;
+</code></pre><p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 泛型工具类型</span><br><span class="line"></span><br><span class="line">  - Partial&lt;Type&gt;</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    //用来构造一个类型,将Type所有属性设置为可选</span><br><span class="line">    interface Props &#123;</span><br><span class="line">        id: string</span><br><span class="line">        children: number[]</span><br><span class="line">    &#125;</span><br><span class="line">    type PartialProps = Partial&lt;Props&gt;</span><br><span class="line">    //构造出来的新类型PartialProps结构和Props相同,但所有属性都变为可选的</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Readonly<Type></p>
+</li>
+<li><p>```ts<br>//将Type的所有属性都设置为readonly<br>interface Props {</p>
+<pre><code>id: string
+children: number[]
+</code></pre><p>}<br>type ReadonlyProps = Readonly<Props></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- Pick&lt;Type,Keys&gt;</span><br><span class="line"></span><br><span class="line">- ```ts</span><br><span class="line">  //从Type中选择一组属性来构造新类型</span><br><span class="line">  interface Props &#123;</span><br><span class="line">      id: string</span><br><span class="line">      title: string</span><br><span class="line">      children: number[]</span><br><span class="line">  &#125;</span><br><span class="line">  type PickProps = Pick&lt;Props, &#x27;id&#x27;|&#x27;title&#x27;&gt;</span><br><span class="line">  //1. Pick工具类型有两个类型变量:1表示选择谁的属性,2表示选择哪几个属性</span><br><span class="line">  //2. 其中第二个类型变量,如果只选择一个则只传入该属性名即可</span><br><span class="line">  //3. 第二个类型变量传入的属性只能是第一个类型变量中存在的属性</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Record<Keys,Type></p>
+</li>
+<li><p>```ts<br>//构造一个对象类型,属性键位Keys,属性类型为Type<br>type RecordObj = Record&lt;’a’ | ‘b’ | ‘c’,string[]&gt;<br>let obj:RecordObj = {</p>
+<pre><code>a: [&#39;1&#39;],
+b: [&#39;2&#39;],
+c: [&#39;3&#39;]
+</code></pre><p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 索引签名类型</span><br><span class="line"></span><br><span class="line">  - 使用场景:当无法确定对象中有哪些属性</span><br><span class="line"></span><br><span class="line">  - ```ts</span><br><span class="line">    interface AnyObject &#123;</span><br><span class="line">        [key: string]: number</span><br><span class="line">    &#125;</span><br><span class="line">    let obj: AnyObject = &#123;</span><br><span class="line">        a: 1,</span><br><span class="line">        b: 2</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //解释</span><br><span class="line">    //1.使用[key:string]来约束该接口中允许出现的属性名称.表示只要是string类型的属性名称,都可以出现在对象中</span><br><span class="line">    //2.这样,对象obj中就可以出现任意多个属性</span><br><span class="line">    //3.key只是一个占位符,可以换成任意合法的变量名称</span><br><span class="line">    //4. 隐藏的前置知识:JS对象(&#123;&#125;)的键是string类型的</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="类型声明文件"><a href="#类型声明文件" class="headerlink" title="类型声明文件"></a>类型声明文件</h1><h2 id="两种文件类型"><a href="#两种文件类型" class="headerlink" title="两种文件类型"></a>两种文件类型</h2><ul>
+<li>.ts文件<ul>
+<li>既包含类型信息,又包含可执行代码</li>
+<li>可以被编译为.js文件,然后,执行代码</li>
+<li>用途:编写程序代码的地方</li>
+</ul>
+</li>
+<li>.d.ts文件<ul>
+<li>只包含类型信息的类型声明文件</li>
+<li>不会生成.js文件,仅用于提供类型信息</li>
+<li>用途: 为JS提供类型信息</li>
+</ul>
+</li>
+</ul>
+<h2 id="类型声明文件来源"><a href="#类型声明文件来源" class="headerlink" title="类型声明文件来源"></a>类型声明文件来源</h2><ul>
+<li>包自带</li>
+<li>DefinitelyTyped提供<ul>
+<li>DefinitelyTyped是一个github仓库,用来提供高质量的TypeScript类型声明</li>
+<li>可以通过npm来下载,包的名称格式为: @types/*</li>
+<li>比如, @types/react , @types/lodash</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建自己的类型声明文件"><a href="#创建自己的类型声明文件" class="headerlink" title="创建自己的类型声明文件"></a>创建自己的类型声明文件</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://UESTC-Majialu.github.io">MaJialu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://uestc-majialu.github.io/2024/06/04/TypeScript/">http://uestc-majialu.github.io/2024/06/04/TypeScript/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://UESTC-Majialu.github.io" target="_blank">马嘉路</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/05/24/%E5%8D%8E%E4%B8%BA%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%AD%A6%E4%B9%A0/" title="华为物联网工程师学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">华为物联网工程师学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">MaJialu</div><div class="author-info__description">长风破浪会有时，直挂云帆济沧海!</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/UESTC-Majialu"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/UESTC-Majialu" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:1835027607@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我的个人博客，暂时还没啥公告</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#TypeScript%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">TypeScript简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8A%BF"><span class="toc-number">1.1.</span> <span class="toc-text">优势</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">常用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.1.</span> <span class="toc-text">类型注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">高级类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">类型声明文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">两种文件类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6%E6%9D%A5%E6%BA%90"><span class="toc-number">3.2.</span> <span class="toc-text">类型声明文件来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">创建自己的类型声明文件</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/04/TypeScript/" title="TypeScript">TypeScript</a><time datetime="2024-06-04T14:23:05.000Z" title="发表于 2024-06-04 22:23:05">2024-06-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/24/%E5%8D%8E%E4%B8%BA%E7%89%A9%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%AD%A6%E4%B9%A0/" title="华为物联网工程师学习">华为物联网工程师学习</a><time datetime="2024-05-24T09:49:59.000Z" title="发表于 2024-05-24 17:49:59">2024-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法">数据结构与算法</a><time datetime="2024-05-20T11:45:25.000Z" title="发表于 2024-05-20 19:45:25">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/20/Java/" title="Java">Java</a><time datetime="2024-05-20T02:44:38.000Z" title="发表于 2024-05-20 10:44:38">2024-05-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/13/LeetCode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" title="LeetCode每日一题">LeetCode每日一题</a><time datetime="2024-05-13T03:46:14.000Z" title="发表于 2024-05-13 11:46:14">2024-05-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 By MaJialu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
