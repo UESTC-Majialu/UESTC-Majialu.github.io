@@ -106,7 +106,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/UESTC-Majialu/UESTC-Majialu.github.io
+  repo: git@github.com:UESTC-Majialu/UESTC-Majialu.github.io.git
   branch: main
   message: 'update Hexo Static Content'
 
