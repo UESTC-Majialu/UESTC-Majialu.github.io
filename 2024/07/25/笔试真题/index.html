@@ -192,19 +192,23 @@
 <p><strong>CSS权重的基本原则</strong></p>
 <p>CSS权重是根据选择器的不同类型来计算的，权重值越高，则该选择器的优先级越高。权重由高到低分为四个等级：</p>
 <ol>
-<li><p><strong>内联样式</strong> (<code>style</code> 属性)：权重为 1000。</p>
+<li>
+<p><strong>内联样式</strong> (<code>style</code> 属性)：权重为 1000。</p>
 <ul>
 <li>例如：<code>&lt;p style=&quot;color: red;&quot;&gt;This text is red.&lt;/p&gt;</code></li>
 </ul>
 </li>
-<li><p><strong>标识符选择器</strong> (<code>#id</code>)：每个标识符选择器权重为 100。</p>
+<li>
+<p><strong>标识符选择器</strong> (<code>#id</code>)：每个标识符选择器权重为 100。</p>
 <ul>
 <li>例如：<code>#myID &#123; color: blue; &#125;</code></li>
 </ul>
 </li>
-<li><p><strong>类选择器</strong> (<code>.class</code>)、属性选择器 (<code>[attribute]</code>) 和伪类 (<code>:hover</code>, <code>:first-child</code> 等)：每个类选择器、属性选择器或伪类的权重为 10。</p>
+<li>
+<p><strong>类选择器</strong> (<code>.class</code>)、属性选择器 (<code>[attribute]</code>) 和伪类 (<code>:hover</code>, <code>:first-child</code> 等)：每个类选择器、属性选择器或伪类的权重为 10。</p>
 <ul>
-<li><p>例如：</p>
+<li>
+<p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.myClass &#123; color: green; &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>或者：<code>a:hover &#123; color: yellow; &#125;</code></li>
@@ -212,9 +216,11 @@
 </li>
 </ul>
 </li>
-<li><p><strong>类型选择器</strong> (<code>element</code>) 和伪元素 (<code>::before</code>, <code>::after</code> 等)：每个类型选择器或伪元素的权重为 1。</p>
+<li>
+<p><strong>类型选择器</strong> (<code>element</code>) 和伪元素 (<code>::before</code>, <code>::after</code> 等)：每个类型选择器或伪元素的权重为 1。</p>
 <ul>
-<li><p>例如：</p>
+<li>
+<p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123; color: orange; &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>或者：<code>p::first-letter &#123; color: purple; &#125;</code></li>
@@ -222,9 +228,11 @@
 </li>
 </ul>
 </li>
-<li><p><strong>通用选择器</strong> (<code>*</code>, <code>div</code>, <code>p</code> 等)、子代选择器 (<code>&gt;</code>), 相邻同胞选择器 (<code>+</code>), 一般同胞选择器 (<code>~</code>) 和伪关键字 <code>:not()</code> 的权重为 0。</p>
+<li>
+<p><strong>通用选择器</strong> (<code>*</code>, <code>div</code>, <code>p</code> 等)、子代选择器 (<code>&gt;</code>), 相邻同胞选择器 (<code>+</code>), 一般同胞选择器 (<code>~</code>) 和伪关键字 <code>:not()</code> 的权重为 0。</p>
 <ul>
-<li><p>例如：</p>
+<li>
+<p>例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &#123; color: black; &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>或者：<code>div &gt; p &#123; color: gray; &#125;</code></li>
@@ -232,12 +240,14 @@
 </li>
 </ul>
 </li>
-<li><p><strong>继承</strong> 和 <strong>用户代理样式表</strong> 的权重为 0，但它们具有默认优先级。</p>
+<li>
+<p><strong>继承</strong> 和 <strong>用户代理样式表</strong> 的权重为 0，但它们具有默认优先级。</p>
 <ul>
 <li>浏览器默认的样式。</li>
 </ul>
 </li>
-<li><p><strong><code>!important</code> 标志</strong>：在样式声明后加上 <code>!important</code> 可以提高权重，其权重高于所有其他权重，但低于内联样式中的 <code>!important</code>。</p>
+<li>
+<p><strong><code>!important</code> 标志</strong>：在样式声明后加上 <code>!important</code> 可以提高权重，其权重高于所有其他权重，但低于内联样式中的 <code>!important</code>。</p>
 <ul>
 <li>例如：<code>p &#123; color: blue !important; &#125;</code></li>
 </ul>
