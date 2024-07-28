@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <style>
+    .progress-ring {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+
+    .progress-ring .circle {
+      fill: none;
+      stroke: #ddd;
+      stroke-width: 20;
+    }
+
+    .progress-ring .progress {
+      fill: none;
+      stroke: #0d7137;
+      stroke-width: 20;
+      stroke-dasharray: 0, 1000;
+      stroke-linecap: round;
+      transition: stroke-dasharray 0.5s ease-in-out;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mr.Ma is awesome!</h1>
-  <button>change</button>
-  <script>
-    var h1 = document.querySelector('h1');
-    var btn = document.querySelector('button');
+  <div class="progress-ring">
+    <svg viewBox="0 0 100 100">
+      <circle class="circle" cx="50" cy="50" r="40"></circle>
+      <circle class="progress" cx="50" cy="50" r="40"></circle>
+    </svg>
+  </div>
+  <input type="number" id="percentageInput" placeholder="输入百分比（0-100）">
+  <button onclick="updateProgress()">更新进度</button>
 
-    // 死循环指定的时间
-    function delay(duration) {
-      var start = Date.now();
-      while(Date.now() - start < duration) {
-        // do nothing
-      }
-    }
-    btn.onclick = function() {
-      h1.textContent = "马老师很帅";
-      delay(3000);
+  <script>
+    function updateProgress() {
+      const percentageInput = document.getElementById('percentageInput');
+      const percentage = parseInt(percentageInput.value, 10);
+      /*--1. 补全代码，当输入的数据不是数字，或者超出【0,100】,当前函数返回null-----*/
+      if(isNaN(percentage)||percentage<0||percentage>100){
+        return null
+        }
+      
+
+      const progressRing = document.querySelector('.progress-ring');
+      const progressCircle = progressRing.querySelector('.progress');
+      const circumference = 2 * Math.PI * 40;
+
+
+       /*--2. 补全代码，根据输入的百分比设置圆环样式-----*/
+      const offset = circumference*percentage/100
+      progressCircle.style.strokeDasharray = `${offset} ${circumference-offset}`
     }
   </script>
 </body>
