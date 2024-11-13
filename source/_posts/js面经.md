@@ -60,3 +60,363 @@ function func() {
 
 ### 手写call,apply,bind
 
+- 手写call
+
+```js
+// 需求: 定义myCall方法，效果等同call方法
+// 由于所有的函数都需要使用该方法，所以需要定义在原型上
+Function.prototype.myCall = function (thisArg, ...args) {
+  // thisArg是要绑定的对象，args是参数列表
+  // 为了保证添加到thisArg中的临时方法不会影响到其他的方法，所以使用Symbol
+  const call = Symbol("call");
+  // this就是调用myCall的函数，将该函数添加到目标对象thisArg中
+  thisArg[call] = this;
+  // 调用该方法，并获取返回值
+  const res = thisArg[call](...args);
+  // 删除临时方法
+  delete thisArg[call];
+  return res;
+};
+
+const person = {
+  name: "lily"
+};
+
+function func(a, b) {
+  console.log(this);
+  console.log(a, b);
+  return a + b;
+}
+
+console.log(func.myCall(person, 1, 2));
+```
+
+- 手写apply
+
+```js
+// 需求：定义myApply方法，效果通apply
+Function.prototype.myApply = function (thisArg, args) {
+  const apply = Symbol("apply");
+  thisArg[apply] = this;
+  const res = thisArg[apply](...args);
+  delete thisArg[apply];
+  return res;
+};
+const obj = {
+  name: "why",
+  age: 18
+};
+
+function foo(a, b) {
+  console.log(this);
+  console.log(a, b);
+  return a + b;
+}
+console.log(foo.myApply(obj,[1,2]));
+```
+
+- 手写bind
+
+```js
+// 需求：定义myBind方法，效果同bind
+Function.prototype.myBind = function (thisArg, ...args) {
+  // bind方法在定义时绑定，返回一个绑定后的函数
+  // 利用箭头函数获取当前作用域的this
+  return (...args2) => {
+    return this.call(thisArg, ...args, ...args2);
+  };
+};
+
+const obj = {
+  name: "why",
+  eating() {
+    console.log(this.name + " eating");
+  }
+};
+
+function func(a, b, c, d) {
+  console.log(this);
+  console.log(a, b, c, d);
+  return a + b + c + d;
+}
+
+const bindFunc = func.myBind(obj, 1, 2);
+console.log(bindFunc(3, 4));
+```
+
+## 继承
+
+1. ES6: 基于Class实现继承
+
+   1. class核心语法
+
+      ```js
+      class Person {
+        name;
+        age;
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        say() {
+          console.log(`${this.name} ${this.age}`);
+        }
+      }
+      
+      const zhansan = new Person("张三", 18);
+      zhansan.say();
+      ```
+
+   2. class实现继承
+
+      - `extends`:创建一个类,该类是另一个类的子类
+      - `super`:访问对象字面量或类的原型[[Prototype]]上的属性,或调用父类的构造函数
+
+      ```js
+      class Person {
+        name;
+        constructor(name) {
+          this.name = name;
+        }
+        sayHi() {
+          console.log("父类de");
+        }
+      }
+      
+      class Student extends Person {
+        age;
+        constructor(name, age) {
+            // 注意字类如果有自己的构造函数
+            // 在访问this之前必须先调用super()
+            // 哪怕父类没有构造函数也需要先调用super()
+            // 目的是先初始化父类对象
+          super(name);
+          this.age = age;
+        }
+        sayHi() {
+          console.log("子类de");
+        }
+      }
+      let stu=new Student("小明",18);
+      console.log(stu.name);
+      console.log(stu.age);
+      stu.sayHi();
+      let per=new Person("小明");
+      per.sayHi();
+      console.log(per instanceof Person);
+      ```
+
+   3. 静态属性和私有属性
+
+      ```js
+      class Person {
+        // 静态属性和方法
+        static stInfo = "我是静态属性";
+        static stMethod() {
+          console.log(this.stInfo);
+        }
+        // 私有属性和方法
+        #prInfo = '私有属性';
+        #prMethod() {
+          console.log('我是私有方法');
+        }
+        testPr() {
+          console.log(this.#prInfo);
+          this.#prMethod();
+        }
+      }
+      
+      Person.stMethod();
+      const zhangsan = new Person();
+      zhangsan.testPr();
+      ```
+
+2. ES5：基于原型和构造函数实现继承
+
+   1. 原型链继承
+
+   2. 借用构造函数继承
+
+   3. 组合继承
+
+   4. 原型式继承
+
+   5. 寄生式继承
+
+   6. 寄生组合式继承 
+
+      - 借用构造函数来继承属性,通过原型链来继承方法
+
+      ```js
+      // 父类构造函数
+      function Person(name) {
+        this.name = name;
+      }
+      
+      // 父类原型
+      Person.prototype.sayHi = function () {
+        console.log(`你好,我叫${this.name}`);
+      };
+      
+      // 子类构造函数
+      function Student(name) {
+        Person.call(this, name);
+      }
+      
+      // 基于父类的原型创建一个新的原型对象
+      const prototype = Object.create(Person.prototype, {
+        constructor: {
+          value: Student
+        }
+      });
+      
+      Student.prototype = prototype;
+      
+      console.log(Student.prototype.__proto__ === Person.prototype);
+      ```
+
+## Fetch
+
+`fetch`是浏览器内置的api,用于发送网络请求
+
+- Ajax: 基于XMLHttpRequest收发请求,使用{%label 较为繁琐 red%}
+- axios: 基于Promise的请求客户端,在浏览器和node中均可使用,{%label  使用简单,功能强大 red%}
+- fetch: 内置api,基于Promise,用法和axios类似,{%label 功能更为简单 red%}
+
+### 核心语法
+
+1. 如何发请求
+2. 如何处理响应(JSON)
+3. 如何处理异常
+
+```js
+async function func(){
+    const res = await fetch('请求地址');
+    res.status
+    const data = await res.json();
+}
+// 示例
+const fun = async () => {
+  const p = new URLSearchParams({
+    pname: "广东省",
+    cname: "深圳市"
+  });
+  const res = await fetch("http://hmajax.itheima.net/api/area" + p.toString());
+  const data = await res.json();
+  console.log(data);
+};
+```
+
+### 提交FormData
+
+1. 如何设置请求方法
+2. 如何提交数据
+
+```js
+async function func(){
+    const res = await fetch('请求地址', {
+        method: '请求方法',
+        body: '提交数据'
+    })
+}
+
+// 示例
+document.querySelector('.ipt').addEventListener(
+      'change', async function () {
+        const img = this.files[0];
+        const data = new FormData();
+        data.append('img', img);
+        const res = await fetch('http://hmajax.itheima.net/api/uploadimg', {
+          method: 'POST',
+          body: data
+        })
+        const url = await res.json();
+        document.querySelector('.icon').src = url.data.url;
+      }
+    )
+```
+
+### 提交JSON
+
+1. 如何设置请求头
+
+```json
+async function func() {
+    const headers = new Headers()
+    headers.append('key', 'value')
+    const res = await fetch('请求地址',{
+        method: '请求方法',
+        body: '提交数据',
+        headers: headers
+    })
+}
+
+// 示例
+import fetch from 'node-fetch';
+const obj = {
+  username: 'test',
+  password: 'testpwd'
+}
+const headers = new Headers();
+headers.append('Content-Type', 'application/json');
+const res = await fetch('http://hmajax.itheima.net/api/register',{
+  method: 'POST',
+  headers,
+  body: JSON.stringify(obj)
+})
+const data = res.json();
+console.log(data);
+```
+
+>兼容ie10+
+>
+>1. promise-polyfill
+>2. whatwg-fetch
+
+## Generator
+
+Generator 是ES6提供的一种异步编程的解决方案
+
+![](Generator.png)
+
+**Generator对象**由{%label 生成器函数 red%}返回并且它符合{%label 可迭代协议 red%}和{%label 迭代器协议 red%}
+
+**生成器函数**在执行时能够{%label 暂停 red%},后面又能从暂停处继续执行.
+
+```js
+function* func() {
+    yield 'it'
+    yield 'heima'
+    yield '666'
+}
+const f = func()
+f.next()
+for(const iterator of f) {
+    console.log(iterator)
+}
+```
+
+```js
+function* Generator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = Generator();
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next())
+// 输出如下
+{ value: 1, done: false }
+{ value: 2, done: false }
+{ value: 3, done: false }
+{ value: undefined, done: true }
+```
+
+## 手写Promise
+
+## 函数柯里化
+
+在计算机科学中,柯里化(Currying),又译为卡瑞化或加里化,是把{%label  接收多个参数的函数变换成接收一个单一参数(最初函数的第一个参数) 的函数 red%},并且
